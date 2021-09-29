@@ -61,7 +61,7 @@ In terms of performance, as I mentioned I am using create-react-app to build the
 The development process that I followed for this project is based on pull requests. I have two branches `master` and `develop`. I create feature branch from develop branch. Work on a feature and push all the changes to that feature branch. Then I make a pull request which could be used for code review purpose other than triggering CI github action. Then it is merged with develop branch upon successful code review/pull request in this case. For release I create a new `tag` and push it and launch it.
 
 ### DevOps
-As mentioned above I used Github Actions as CI/CD. When the pull request is created for the feature it triggers github action and the feature is deployed to dev/staging environment, for which I used netlify. When I create a new tag with a release verion and push it, it triggers deployment to production.
+As mentioned above I used Github Actions as CI/CD. When the pull request is created for the feature it triggers github action and the feature is deployed to dev/staging environment, for which I used netlify. When I create a new tag with a release verion and push it, it triggers deployment to production. The workflow for CI/CD can be found in `/.github/workflows/` folder.
 
 ### Code Quality
 I wrote the entire project in components and pages architecture which means there will be separate pages and those pages will contain components. I wrote all the code very readable and easy to follow. I also used `JSDocs` to document the entire code. In addition, I used `create-react-app`'s default `eslint` configuration keep the quality of the code intact.
